@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<title>Apex Fitness Miami · Elite Performance Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Inter+Mono:wght@500&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<nav id="mainNav">
+  <a href="#" class="nav-logo">APEX<span>.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#reviews">Results</a>
+    <a href="#training">Programs</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#form" class="nav-cta">Book Free Assessment</a>
+  </div>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <p class="eyebrow reveal" data-delay="0">Downtown Miami · Brickell · Est. 2026</p>
+
+    <div class="h1-wrapper reveal" data-delay="80">
+      <h1>
+        <span class="line">Train</span>
+        <span class="highlight">Without</span>
+        <span class="accent">Limits.</span>
+      </h1>
+    </div>
+
+    <p class="hero-body reveal" data-delay="160">
+      Elite coaching. <strong>Data-driven results.</strong> An uncrowded facility built for people who are serious about performance — not just showing up.
+    </p>
+
+    <div class="cta-group reveal" data-delay="240">
+      <a href="#form" class="btn-primary js-magnetic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span>Book Your Free Assessment</span>
+      </a>
+      <a href="#training" class="btn-ghost">
+        See Services
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <p class="free-badge reveal" data-delay="300">Includes InBody scan · Zero commitment · Zero initiation fees</p>
+
+    <div class="stat-bar reveal" data-delay="380">
+      <div class="stat">
+        <div class="stat-number" data-count="12">0</div>
+        <div class="stat-label">Elite Coaches</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" data-count="10">0</div>
+        <div class="stat-label">Max Group Size</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">5★</div>
+        <div class="stat-label">Avg. Rating</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="dashboard" id="dashPanel" aria-label="Top Profiles of the Month carousel">
+      <div class="carousel-title">Top Profiles of the Month</div>
+      <div class="carousel-nav">
+        <button class="carousel-arrow" id="carouselPrev" aria-label="Previous profile">&#8249;</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-arrow" id="carouselNext" aria-label="Next profile">&#8250;</button>
+      </div>
+
+      <div class="dash-inner" id="dashInner">
+        <div class="dash-header">
+          <div class="dash-athlete">
+            <div class="dash-avatar" id="dashAvatar">MT</div>
+            <div>
+              <div class="dash-name" id="dashName">Marcus T.</div>
+              <div class="dash-cycle" id="dashCycle">12-Week Transformation</div>
+            </div>
+          </div>
+          <div class="dash-badge" id="dashBadge">Week 12</div>
+        </div>
+
+        <div class="metric-row" id="m1">
+          <div class="metric-top">
+            <span class="metric-label">Body Fat</span>
+            <span class="metric-delta" id="m1Delta">▼ −6.4%</span>
+          </div>
+          <div class="metric-values">
+            <span class="metric-before" id="m1Before">24.1</span>
+            <span class="metric-arrow">→</span>
+            <span class="metric-after" id="m1After">17.7</span>
+            <span class="metric-unit">%</span>
+          </div>
+          <div class="metric-track"><div class="metric-fill blue" id="m1Fill" data-width="73"></div></div>
+        </div>
+
+        <div class="metric-row" id="m2">
+          <div class="metric-top">
+            <span class="metric-label">Lean Mass</span>
+            <span class="metric-delta" id="m2Delta">▲ +4.8 kg</span>
+          </div>
+          <div class="metric-values">
+            <span class="metric-before" id="m2Before">71.2</span>
+            <span class="metric-arrow">→</span>
+            <span class="metric-after" id="m2After">76.0</span>
+            <span class="metric-unit">kg</span>
+          </div>
+          <div class="metric-track"><div class="metric-fill green" id="m2Fill" data-width="82"></div></div>
+        </div>
+
+        <div class="metric-row" id="m3">
+          <div class="metric-top">
+            <span class="metric-label">VO₂ Max</span>
+            <span class="metric-delta" id="m3Delta">▲ +11.2</span>
+          </div>
+          <div class="metric-values">
+            <span class="metric-before" id="m3Before">47.2</span>
+            <span class="metric-arrow">→</span>
+            <span class="metric-after" id="m3After">58.4</span>
+            <span class="metric-unit">ml/kg/min</span>
+          </div>
+          <div class="metric-track"><div class="metric-fill white" id="m3Fill" data-width="88"></div></div>
+        </div>
+
+        <div class="timeline-strip" id="tlStrip">
+          <span class="tl-label">Week 1</span>
+          <div class="tl-line"></div>
+          <div class="tl-dot past"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot past"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot past"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot past"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot past"></div>
+          <div class="tl-line"></div>
+          <div class="tl-dot active"></div>
+          <div class="tl-line"></div>
+          <span class="tl-label end" id="tlEnd">Week 12</span>
+        </div>
+
+        <p class="dash-footnote" id="dashFootnote">Real results · InBody-verified · 12 weeks</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="review-strip" aria-label="Client reviews">
+  <div class="ticker-track">
+    <div class="ticker-item">
+      <span class="ticker-stars">★★★★★</span>
+      <span class="ticker-quote">"The data-driven approach to my training broke a 2-year plateau."</span>
+      <span class="ticker-author">— Marcus T., 34</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-stars">★★★★★</span>
+      <span class="ticker-quote">"Capped at 10 people. The coaches actually watch your form."</span>
+      <span class="ticker-author">— Sarah J., 29</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-stars">★★★★★</span>
+      <span class="ticker-quote">"They mapped my biomechanical imbalances before I touched a weight."</span>
+      <span class="ticker-author">— David R., 42</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-stars">★★★★★</span>
+      <span class="ticker-quote">"Apex isn't just a facility. It's a high-performance center."</span>
+      <span class="ticker-author">— Elena V., 31</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-stars" style="color:#39FF14">★★★★</span>
+      <span class="ticker-quote">"The cold plunges and infrared saunas make recovery immediate."</span>
+      <span class="ticker-author">— Michael C., 38</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-stars">★★★★★</span>
+      <span class="ticker-quote">"The data-driven approach to my training broke a 2-year plateau."</span>
+      <span class="ticker-author">— Marcus T., 34</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-stars">★★★★★</span>
+      <span class="ticker-quote">"Capped at 10 people. The coaches actually watch your form."</span>
+      <span class="ticker-author">— Sarah J., 29</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-stars">★★★★★</span>
+      <span class="ticker-quote">"They mapped my biomechanical imbalances before I touched a weight."</span>
+      <span class="ticker-author">— David R., 42</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-stars">★★★★★</span>
+      <span class="ticker-quote">"Apex isn't just a facility. It's a high-performance center."</span>
+      <span class="ticker-author">— Elena V., 31</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-stars" style="color:#39FF14">★★★★</span>
+      <span class="ticker-quote">"The cold plunges and infrared saunas make recovery immediate."</span>
+      <span class="ticker-author">— Michael C., 38</span>
+    </div>
+  </div>
+</div>
+
+<section class="form-section" id="form">
+  <div class="form-inner">
+    <div>
+      <p class="eyebrow reveal" data-delay="0" style="margin-bottom:1rem;">Free Performance Assessment</p>
+      <h2 class="form-heading reveal" data-delay="60">Your First<br />Session<br /><span style="color:#00BFFF">Is Free.</span></h2>
+      <p class="form-subhead reveal" data-delay="120">
+        Book your complimentary <strong>InBody scan + movement assessment</strong> with an elite coach. No commitment. No initiation fees. Just results.
+      </p>
+      <ul class="features-list" id="featuresList">
+        <li class="reveal-child"><span>InBody scan</span> — full body composition analysis</li>
+        <li class="reveal-child"><span>Movement assessment</span> — biomechanical baseline</li>
+        <li class="reveal-child"><span>Custom training roadmap</span> — built for your goals</li>
+        <li class="reveal-child"><span>Zero pressure</span> — no sales pitch, ever</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="lead-form reveal" data-delay="0" id="leadForm">
+        <div class="field-group">
+          <div class="field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Marcus" autocomplete="given-name" required />
+          </div>
+          <div class="field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Torres" autocomplete="family-name" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 (305) 000-0000" autocomplete="tel" />
+        </div>
+        <div class="field">
+          <label for="goal">Primary Goal</label>
+          <select id="goal" name="goal" required>
+            <option value="" disabled selected>Select your focus</option>
+            <option value="performance">Athletic Performance</option>
+            <option value="body-comp">Body Composition</option>
+            <option value="recovery">Recovery & Longevity</option>
+            <option value="strength">Strength & Power</option>
+            <option value="conditioning">Conditioning</option>
+          </select>
+        </div>
+        <button type="button" class="submit-btn js-magnetic" id="submitBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span>Claim Your Free Assessment</span>
+        </button>
+        <p class="form-legal">No commitment. Zero initiation fees. Flat-rate pricing — no hidden fees.</p>
+      </div>
+
+      <div class="success-state" id="successState">
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h3>You're In.</h3>
+        <p>The Apex Team will contact you within 24 hours to lock in your session.</p>
+        <p class="free-badge" style="margin-top:0.5rem;">Apex Performance Team</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="training" class="services-section">
+  <div class="services-inner">
+    <div class="section-header reveal" data-delay="0">
+      <p class="eyebrow" style="margin-bottom:0.75rem;">What We Offer</p>
+      <h2 class="section-title">Built Around<br /><span style="color:#00BFFF;">Your Training.</span></h2>
+      <p class="section-sub">Three programs. Zero fluff. Every one designed to deliver measurable results — not just keep you busy.</p>
+    </div>
+
+    <div class="services-grid" id="servicesGrid">
+      <div class="service-card reveal-child js-tilt" data-delay="0">
+        <div class="service-card-accent" style="background:linear-gradient(135deg,rgba(0,191,255,0.18),transparent 70%)"></div>
+        <div class="service-icon-wrap" style="border-color:rgba(0,191,255,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00BFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4v16M18 4v16M6 12h12M3 8h3M18 8h3M3 16h3M18 16h3"/></svg>
+        </div>
+        <div class="service-tag" style="color:#00BFFF;border-color:rgba(0,191,255,0.2);">Personal Training</div>
+        <h3 class="service-name">Elite 1-on-1<br />Coaching</h3>
+        <p class="service-desc">Data-driven programming built around your exact biomechanics. Every session tracked, every variable optimized.</p>
+        <div class="service-price">
+          <span class="price-from">From</span>
+          <span class="price-amount">$150</span>
+          <span class="price-unit">/ session</span>
+        </div>
+        <div class="service-divider"></div>
+        <ul class="service-features">
+          <li>InBody baseline on Day 1</li>
+          <li>Custom programming — updated weekly</li>
+          <li>Access via member app</li>
+        </ul>
+        <a href="#form" class="service-cta">Start Training</a>
+      </div>
+
+      <div class="service-card service-card--featured reveal-child js-tilt" data-delay="80">
+        <div class="service-card-accent" style="background:linear-gradient(135deg,rgba(0,191,255,0.22),rgba(57,255,20,0.08) 70%)"></div>
+        <div class="featured-badge">Most Popular</div>
+        <div class="service-icon-wrap" style="border-color:rgba(0,191,255,0.4);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00BFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/><path d="M7.5 4.5l9 0"/></svg>
+        </div>
+        <div class="service-tag" style="color:#00BFFF;border-color:rgba(0,191,255,0.2);">Group Conditioning</div>
+        <h3 class="service-name">High-Intensity<br />Group Sessions</h3>
+        <p class="service-desc">Capped at 10 people. The energy of a group. The attention of a personal coach. Maximum output, zero compromise.</p>
+        <div class="service-price">
+          <span class="price-from">From</span>
+          <span class="price-amount">$199</span>
+          <span class="price-unit">/ month</span>
+        </div>
+        <div class="service-divider" style="background:rgba(0,191,255,0.15)"></div>
+        <ul class="service-features">
+          <li>Capped at 10 athletes</li>
+          <li>Coach-led every session</li>
+          <li>Flexible scheduling</li>
+        </ul>
+        <a href="#form" class="service-cta service-cta--primary">Claim Your Spot</a>
+      </div>
+
+      <div class="service-card reveal-child js-tilt" data-delay="160">
+        <div class="service-card-accent" style="background:linear-gradient(135deg,rgba(57,255,20,0.12),transparent 70%)"></div>
+        <div class="service-icon-wrap" style="border-color:rgba(57,255,20,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg>
+        </div>
+        <div class="service-tag" style="color:#39FF14;border-color:rgba(57,255,20,0.2);">Recovery Zone</div>
+        <h3 class="service-name">Recovery<br />& Longevity</h3>
+        <p class="service-desc">Cold plunge. Infrared sauna. The recovery protocols used by pro athletes — available to you every day.</p>
+        <div class="service-price">
+          <span class="price-from">From</span>
+          <span class="price-amount">$89</span>
+          <span class="price-unit">/ month</span>
+        </div>
+        <div class="service-divider"></div>
+        <ul class="service-features">
+          <li>Cold plunge & infrared sauna</li>
+          <li>Unlimited access</li>
+          <li>Zero initiation fees</li>
+        </ul>
+        <a href="#form" class="service-cta">Access Recovery</a>
+      </div>
+    </div>
+
+    <div class="diff-strip reveal" data-delay="0">
+      <div class="diff-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Flat-rate pricing. No hidden fees.</span>
+      </div>
+      <div class="diff-sep" aria-hidden="true">·</div>
+      <div class="diff-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Zero initiation fees. Cancel anytime.</span>
+      </div>
+      <div class="diff-sep" aria-hidden="true">·</div>
+      <div class="diff-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Limited memberships. Always uncrowded.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews-section">
+  <div class="reviews-inner">
+    <div class="reviews-header reveal" data-delay="0">
+      <p class="eyebrow" style="margin-bottom:0.75rem;">Real Results</p>
+      <h2 class="section-title">What Our<br /><span style="color:#00BFFF;">Athletes Say.</span></h2>
+    </div>
+
+    <div class="reviews-grid" id="reviewsGrid">
+      <div class="review-card reveal-child">
+        <div class="review-stars">★★★★★</div>
+        <blockquote class="review-quote">"The data-driven approach to my training broke a 2-year plateau. I saw measurable strength gains within the first six weeks."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,rgba(0,191,255,0.3),rgba(0,191,255,0.05))">MT</div>
+          <div>
+            <div class="review-name">Marcus T.</div>
+            <div class="review-meta">34 · Financial Director</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card review-card--accent reveal-child">
+        <div class="review-stars">★★★★★</div>
+        <blockquote class="review-quote">"Capped at 10 people. The coaches actually watch your form. Coming from Equinox, the difference in attention is night and day."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,rgba(57,255,20,0.3),rgba(57,255,20,0.05))">SJ</div>
+          <div>
+            <div class="review-name">Sarah J.</div>
+            <div class="review-meta">29 · Attorney</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card reveal-child">
+        <div class="review-stars">★★★★★</div>
+        <blockquote class="review-quote">"They mapped my biomechanical imbalances before I touched a weight. That baseline changed everything about how I train."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,rgba(0,191,255,0.3),rgba(0,191,255,0.05))">DR</div>
+          <div>
+            <div class="review-name">David R.</div>
+            <div class="review-meta">42 · CEO</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card reveal-child">
+        <div class="review-stars">★★★★★</div>
+        <blockquote class="review-quote">"Apex isn't just a facility. It's a high-performance center. The app tracking keeps me accountable between sessions."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,rgba(57,255,20,0.2),rgba(0,191,255,0.1))">EV</div>
+          <div>
+            <div class="review-name">Elena V.</div>
+            <div class="review-meta">31 · Surgeon</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card reveal-child">
+        <div class="review-stars" style="color:#39FF14;">★★★★<span style="color:rgba(255,255,255,0.15);">★</span></div>
+        <blockquote class="review-quote">"The cold plunges and infrared saunas make recovery immediate. I train harder because I know I'll bounce back faster."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar" style="background:linear-gradient(135deg,rgba(57,255,20,0.3),rgba(57,255,20,0.05))">MC</div>
+          <div>
+            <div class="review-name">Michael C.</div>
+            <div class="review-meta">38 · Pro Athlete</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card review-card--cta reveal-child">
+        <div class="review-cta-inner">
+          <div class="review-cta-stat">
+            <span class="review-cta-number">5.0</span>
+            <div class="review-cta-stars">★★★★★</div>
+            <span class="review-cta-label">Average Rating</span>
+          </div>
+          <p class="review-cta-copy">Join athletes who train smarter — not harder.</p>
+          <a href="#form" class="service-cta service-cta--primary" style="width:100%;justify-content:center;">Book Free Assessment</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="methodology" class="method-section">
+  <div class="method-inner">
+    <div class="method-left reveal" data-delay="0">
+      <p class="eyebrow" style="margin-bottom:0.75rem;">How It Works</p>
+      <h2 class="section-title">Four Steps.<br /><span style="color:#00BFFF;">Zero Guesswork.</span></h2>
+      <p class="section-sub">Every Apex athlete follows the same evidence-based process. From your first scan to your peak performance — nothing is left to chance.</p>
+      <a href="#form" class="btn-primary js-magnetic" style="margin-top:2.5rem;display:inline-flex;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span>Start With a Free Assessment</span>
+      </a>
+    </div>
+
+    <div class="method-steps" id="methodSteps">
+      <div class="method-step reveal-child">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3 class="step-title">InBody Assessment</h3>
+          <p class="step-desc">Your first session is free. We map your body composition, movement patterns, and biomechanical baselines. No assumptions, only data.</p>
+          <div class="step-tag">Free · No commitment</div>
+        </div>
+      </div>
+
+      <div class="method-step reveal-child">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3 class="step-title">Custom Programming</h3>
+          <p class="step-desc">Your elite coach builds a program around your exact data — not a template. Updated weekly based on your tracked performance.</p>
+          <div class="step-tag">Data-driven · Weekly updates</div>
+        </div>
+      </div>
+
+      <div class="method-step reveal-child">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3 class="step-title">Train & Track</h3>
+          <p class="step-desc">Every session logged in your member app. Every variable monitored. You see your progress in real numbers — not just how you feel.</p>
+          <div class="step-tag">Member app · Real-time tracking</div>
+        </div>
+      </div>
+
+      <div class="method-step reveal-child">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <h3 class="step-title">Recover & Optimize</h3>
+          <p class="step-desc">Cold plunge and infrared sauna access keeps your recovery as dialed as your training. Performance is built between sessions too.</p>
+          <div class="step-tag">Cold plunge · Infrared sauna</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing-section">
+  <div class="pricing-inner">
+    <div class="pricing-header reveal" data-delay="0">
+      <p class="eyebrow" style="margin-bottom:0.75rem;">Transparent Pricing</p>
+      <h2 class="section-title">Flat Rate.<br /><span style="color:#00BFFF;">No Hidden Fees.</span></h2>
+      <p class="section-sub">No initiation fees. No asterisks. What you see is what you pay.</p>
+    </div>
+
+    <div class="pricing-grid" id="pricingGrid">
+      <div class="price-card reveal-child">
+        <div class="price-card-top">
+          <div class="price-tier-label">Recovery Zone</div>
+          <div class="price-amount-wrap">
+            <span class="price-currency">$</span>
+            <span class="price-num">89</span>
+            <span class="price-per">/mo</span>
+          </div>
+          <p class="price-desc">Cold plunge + infrared sauna. Unlimited access. The recovery stack used by pro athletes.</p>
+        </div>
+        <ul class="price-includes">
+          <li>Cold plunge — unlimited</li>
+          <li>Infrared sauna — unlimited</li>
+          <li>Zero initiation fee</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <a href="#form" class="service-cta" style="width:100%;justify-content:center;margin-top:auto;">Get Access</a>
+      </div>
+
+      <div class="price-card price-card--featured reveal-child">
+        <div class="price-featured-label">Most Popular</div>
+        <div class="price-card-top">
+          <div class="price-tier-label" style="color:#00BFFF;">Group Conditioning</div>
+          <div class="price-amount-wrap">
+            <span class="price-currency">$</span>
+            <span class="price-num">199</span>
+            <span class="price-per">/mo</span>
+          </div>
+          <p class="price-desc">High-intensity sessions capped at 10. Coach attention without the 1-on-1 price tag.</p>
+        </div>
+        <ul class="price-includes">
+          <li>Unlimited group sessions</li>
+          <li>Max 10 athletes per session</li>
+          <li>Coach-led every session</li>
+          <li>Member app access</li>
+          <li>Zero initiation fee</li>
+        </ul>
+        <a href="#form" class="service-cta service-cta--primary" style="width:100%;justify-content:center;margin-top:auto;">Claim Your Spot</a>
+      </div>
+
+      <div class="price-card reveal-child">
+        <div class="price-card-top">
+          <div class="price-tier-label">Elite Personal Training</div>
+          <div class="price-amount-wrap">
+            <span class="price-currency">$</span>
+            <span class="price-num">150</span>
+            <span class="price-per">/session</span>
+          </div>
+          <p class="price-desc">1-on-1 with an elite coach. Fully customized programming. Maximum accountability.</p>
+        </div>
+        <ul class="price-includes">
+          <li>Full biomechanical assessment</li>
+          <li>Custom weekly programming</li>
+          <li>Direct coach access</li>
+          <li>Progress tracking via app</li>
+          <li>InBody scans included</li>
+        </ul>
+        <a href="#form" class="service-cta" style="width:100%;justify-content:center;margin-top:auto;">Book a Session</a>
+      </div>
+    </div>
+
+    <div class="guarantee-strip reveal" data-delay="0">
+      <div class="guarantee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Zero initiation fees — ever</span>
+      </div>
+      <div class="guarantee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Flat-rate pricing — no surprises</span>
+      </div>
+      <div class="guarantee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>First assessment free — no commitment</span>
+      </div>
+      <div class="guarantee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Cancel anytime — no lock-in</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta-section">
+  <div class="final-cta-inner reveal" data-delay="0">
+    <p class="eyebrow" style="margin-bottom:1rem;justify-content:center;">Downtown Miami · Brickell · Opening 2026</p>
+    <h2 class="final-cta-title">Your Peak<br />Performance<br /><span style="color:#00BFFF;">Starts Here.</span></h2>
+    <p class="final-cta-sub">Book your free assessment. Meet your coach. Get your data. No commitment — just results.</p>
+    <div class="final-cta-actions">
+      <a href="#form" class="btn-primary js-magnetic" style="font-size:0.8rem;padding:1.1rem 2.5rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span>Book Your Free Assessment</span>
+      </a>
+      <p class="final-cta-legal">Includes InBody scan · Zero commitment · Zero initiation fees</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="font-size:2rem;">APEX<span style="color:#00BFFF">.</span></a>
+        <p class="footer-tagline">Build elite performance.<br />Eliminate excuses.</p>
+        <a href="#form" class="btn-primary js-magnetic" style="margin-top:1.5rem;display:inline-flex;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span>Book Free Assessment</span>
+        </a>
+      </div>
+      <div class="footer-links-col">
+        <p class="footer-col-label">Training</p>
+        <a href="#training">Elite Personal Training</a>
+        <a href="#training">Group Conditioning</a>
+        <a href="#training">Recovery Zone</a>
+      </div>
+      <div class="footer-links-col">
+        <p class="footer-col-label">Facility</p>
+        <a href="#">Downtown Miami · Brickell</a>
+        <a href="#">Member App</a>
+        <a href="#form">Book Assessment</a>
+      </div>
+      <div class="footer-links-col">
+        <p class="footer-col-label">Contact</p>
+        <a href="mailto:team@apexfitnessmia.com">team@apexfitnessmia.com</a>
+        <a href="tel:+13050000000">+1 (305) 000-0000</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Apex Fitness Miami. All rights reserved.</p>
+      <p class="footer-sig">Apex Performance Team</p>
+    </div>
+  </div>
+</footer>
+
+<script src="./src/main.js" defer></script>
+
+</body>
+</html>
