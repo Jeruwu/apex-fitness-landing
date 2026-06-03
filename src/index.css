@@ -22,6 +22,10 @@
 
 html { scroll-behavior: smooth; }
 
+section {
+  scroll-margin-top: 90px;
+}
+
 body {
 background-color: var(--charcoal);
 color: var(--white);
@@ -66,7 +70,7 @@ transform: translateY(0);
 
 .nav-logo {
 font-family: 'Bebas Neue', sans-serif;
-font-size: 1.75rem;
+font-size: 2.8rem;
 letter-spacing: 0.12em;
 color: var(--white);
 text-decoration: none;
